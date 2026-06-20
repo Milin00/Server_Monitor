@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diary</title>
-</head>
-<body>
-    <h1>Diary</h1>
+{% extends 'base/diary_base.html' %}
+{% block body %}
+
     <p>Welcome to your diary!</p>
-    <P>{{datetime_now}}</P>
+    <p>{{datetime_now}}</p>
     <br>
     <a href="{% url 'diary:page_create' %}">日記を書く</a>
-</body>
-</html>
+{% endblock %}
