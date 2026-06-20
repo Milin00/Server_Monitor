@@ -15,15 +15,14 @@ class IndexView(View):
 class PageCreateView(View):
     def get(self,request):
         form = PageForm()
-        return render(request, 'diary/page_form.html', {'form': form})
+        return render(request, 'diary/create_form.html', {'form': form})
     
     def post(self, request):
         form=PageForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('diary:index')
-        return render(request, 'diary/page_form.html', {'form': form})
-
+        return render(request, 'diary/create_form.html', {'form': form})
             
 index = IndexView.as_view()
 page_create = PageCreateView.as_view()
