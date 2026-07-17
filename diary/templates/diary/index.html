@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>日記</title>
+</head>
+<body>
+    {% for item in Data%}
+    <ul>
+        <li>{{item.title}}</li>
+        <li>{{item.page}}</li>
+        <li>{{item.datetime}}</li>
+        <li>{{item.id}}</li>
+    </ul>
+</body>
+</html>
