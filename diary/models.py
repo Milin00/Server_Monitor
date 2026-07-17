@@ -4,7 +4,3 @@ class Data(models.Model):
     title=models.CharField(max_length=50)
     page=models.CharField(max_length=500)
     datetime=models.TimeField(auto_now=True)
-    id=models.IntegerField()
-
-    def __str__(self):
-        return Data
